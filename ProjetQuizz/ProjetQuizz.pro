@@ -27,12 +27,16 @@ SOURCES += \
         main.cpp \
         question.cpp \
     stats.cpp \
-    image.cpp
+    image.cpp \
+    bddinterface.cpp \
+    serveur.cpp
 
 HEADERS += \
         question.h \
     stats.h \
-    image.h
+    image.h \
+    bddinterface.h \
+    serveur.h
 
 FORMS += \
         question.ui
