@@ -2,3 +2,9 @@
 Recherge d'image
 création du projet c++
 ----------------------
+
+08/11/2019-----------------------------------------
+Recherche librairie graphique + essaie instalation gtkmm
+coddage en local fonction aléatoire pour la selection des images
+réinstallation gitkraken
+---------------------------------------------------
