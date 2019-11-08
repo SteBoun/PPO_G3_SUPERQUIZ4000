@@ -1,0 +1,6 @@
+08/11/19
+Création profile github & colonnage projet. 30min
+Création class stats. 20 min
+Création projet QT avec widget. 10 min
+Apprentissage de librairie graphique de QT. 1h
+Création de fenêtre et affichage d'une image dans la fenêtre. 1h

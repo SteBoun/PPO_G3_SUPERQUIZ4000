@@ -1,11 +1,22 @@
 #ifndef QUESTION_H
 #define QUESTION_H
-class question{
+
+#include <QMainWindow>
+
+namespace Ui {
+class question;
+}
+
+class question : public QMainWindow
+{
+    Q_OBJECT
+
 public:
-    question();
+    explicit question(QWidget *parent = 0);
+    ~question();
+
 private:
-    std::string m_question;//variable contenant la question
-    std::string m_reponse[];//variable contenant les réponses
+    Ui::question *ui;
 };
 
 #endif // QUESTION_H

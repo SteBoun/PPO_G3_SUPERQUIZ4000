@@ -36,3 +36,9 @@ HEADERS += \
 
 FORMS += \
         question.ui
+
+RESOURCES += \
+    images.qrc
+
+DISTFILES += \
+    ../../../Pictures/cap.PNG
