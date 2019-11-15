@@ -1,0 +1,13 @@
+18/10/2019 : Création du Schéma BDD puis création des Table joueurs, photos, photos modifiée, réponse, users.
+Création des users, ajout des rôles, création d’un utilisateur test, ajout des images dans la BDD, recherche d’une librairie graphique en c++ : gtkmm.
+Assimiler la librairie gtkmm : http://sdz.tdct.org/sdz/creer-des-interfaces-graphiques-en-c-avec-gtkmm.html#CrerdesinterfacesgraphiquesenCavecgtkmm
+Rédaction de la sitographie
+
+08/11/2019 : Commencement du programme.
+Bdd connection fais
+Message serveur fais
+
+15/11/2019 : Verification du materiel
+Correction de bug dans ma fonction d'envoie de message
+Ajout d'une classe Client
+Modification des images
