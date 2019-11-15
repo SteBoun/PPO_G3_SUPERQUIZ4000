@@ -1,6 +1,5 @@
 #include "stats.h"
-#include <stdio.h>
-#include <iostream>
+#include "iostream"
 
 
 
