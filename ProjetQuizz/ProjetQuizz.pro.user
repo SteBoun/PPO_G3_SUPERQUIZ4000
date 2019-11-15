@@ -564,11 +564,19 @@
 =======
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 4.3.1, 2019-11-15T09:07:50. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{8287f7e5-ecfe-44e9-8ed1-eeb84b80151b}</value>
+=======
+<!-- Written by QtCreator 4.3.1, 2019-11-08T16:17:01. -->
+<qtcreator>
+ <data>
+  <variable>EnvironmentId</variable>
+  <value type="QByteArray">{e0aed597-df35-427e-93ec-f755729c063e}</value>
+>>>>>>> master
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -850,7 +858,11 @@
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">ProjetQuizz</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:H:/20192020/ANGIBAUD/PPO_G3_SUPERQUIZ4000/PPO_G3_SUPERQUIZ4000/ProjetQuizz/ProjetQuizz.pro</value>
+=======
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:H:/Projet_image/PPO_G3_SUPERQUIZ4000/PPO_G3_SUPERQUIZ4000/ProjetQuizz/ProjetQuizz.pro</value>
+>>>>>>> master
     <value type="bool" key="QmakeProjectManager.QmakeRunConfiguration.UseLibrarySearchPath">true</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">ProjetQuizz.pro</value>
