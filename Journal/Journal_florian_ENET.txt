@@ -4,3 +4,13 @@ Création class stats. 20 min
 Création projet QT avec widget. 10 min
 Apprentissage de librairie graphique de QT. 1h
 Création de fenêtre et affichage d'une image dans la fenêtre. 1h
+
+15/11/19
+Modification interface, centrer les images 
+Ajout 3 images propositions
+Modifications taille images
+Création fonction set_random(), set_random(), get_path(int a)
+à faire, faire en sorte que 2 m_path_imgProp soit des images différentes et une m_path_imgProp soit l'image pixelisé
+
+
+
