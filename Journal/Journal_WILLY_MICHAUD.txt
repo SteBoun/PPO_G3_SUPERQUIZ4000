@@ -8,3 +8,8 @@ Recherche librairie graphique + essaie instalation gtkmm
 coddage en local fonction aléatoire pour la selection des images
 réinstallation gitkraken
 ---------------------------------------------------
+
+15/11/2019---------------------------------------------
+Recherche+creation fonction aleatoire
+modification image debut
+-------------------------------------------------------
