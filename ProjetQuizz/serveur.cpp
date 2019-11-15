@@ -1,30 +1,11 @@
-#include "entete/serveur.h"
-
+#include "serveur.h"
+#include <QThread>
+#include <sstream>
 #include <QtNetwork>
 #include <stdlib.h>
 #include <iostream>
 
-#include "entete/fenetreprincipale.h"
 
-
-//###############################################################################################################
-// Constructeur
-Serveur::Serveur(FenetrePrincipale * f)
-:   m_tcp_serveur(0), m_network_session(0), m_blockSize(0), m_fenetre(f)
-{
-    QNetworkConfigurationManager manager;
-    QNetworkConfiguration config = manager.defaultConfiguration();
-    m_network_session = new QNetworkSession(config, this);
-
-    // La méthode sessionOuverte sera appelée sur le signal opened
-    connect(m_network_session, SIGNAL(opened()), this, SLOT(sessionOuverte()));
-
-    // Ouverture de la session
-    m_network_session->open();
-
-    // La méthode connexionClient sera appelée sur le signal newConnection
-    connect(m_tcp_serveur, SIGNAL(newConnection()), this, SLOT(connexionClient()));
-}
 
 //###############################################################################################################
 // Méthode appelée lors de l'ouverture de session
@@ -56,103 +37,3 @@ void Serveur::connexionClient()
 
 }
 
-//###############################################################################################################
-// Traitement de la chaine de caractères recue
-std::string Serveur::traiter_chaine( const std::string & s )
-{
-    std::string res;
-
-    for ( unsigned int i = 0; i != s.size(); ++i )
-        if ( ( (int)(s[i]) >= 48 && (int)(s[i]) <= 58 ) ||
-             (int)(s[i]) == 65 ||
-             (int)(s[i]) == 69 ||
-             (int)(s[i]) == 71 ||
-             (int)(s[i]) == 78 )
-            res = res + s[i];
-
-    return res;
-}
-
-//###############################################################################################################
-// Teste la validoté de la chaine de caractères recue
-void Serveur::tester_validite(const std::string & s)
-{
-    bool ok = false;
-    int num_enigme;
-
-    if ( s.size() >= 7 )
-    {
-        std::string debut(s,0,6);
-        std::string fin(s,6,s.size()-6);
-
-        if ( debut == "GAGNE:" )
-        {
-            QString qfin = QString::fromStdString(fin);
-            num_enigme = qfin.toInt(&ok);
-            std::cout << "numero enigme : " << num_enigme << std::endl;
-        }
-    }
-
-
-    if ( ok )
-    {
-        std::cout << "MESSAGE VALIDE" << std::endl;
-        m_fenetre->valider_enigme(num_enigme);
-    }
-    else
-        std::cout << "ERREUR : FORMAT INVALIDE" << std::endl;
-
-}
-
-//###############################################################################################################
-// Méthode appelée lors de la réception d'un texte
-void Client::lireTexte()
-{
-    QDataStream in(m_tcpSocket);
-    in.setVersion(QDataStream::Qt_4_0);
-
-    if (m_blockSize == 0) {
-        if (m_tcpSocket->bytesAvailable() < (int)sizeof(quint16))
-            return;
-
-        in >> m_blockSize;
-    }
-
-    if (m_tcpSocket->bytesAvailable() < m_blockSize)
-        return;
-
-    QString texte;
-    in >> texte;
-
-    std::cout << texte.toStdString() << std::endl;
-    m_blockSize = 0;
-
-     envoiTexte("GAGNER:3");
-}
-
-
-//###############################################################################################################
-// Méthode appelée lors de la réception d'un texte
-void Client::lireTexte()
-{
-    QDataStream in(m_tcpSocket);
-    in.setVersion(QDataStream::Qt_4_0);
-
-    if (m_blockSize == 0) {
-        if (m_tcpSocket->bytesAvailable() < (int)sizeof(quint16))
-            return;
-
-        in >> m_blockSize;
-    }
-
-    if (m_tcpSocket->bytesAvailable() < m_blockSize)
-        return;
-
-    QString texte;
-    in >> texte;
-
-    std::cout << texte.toStdString() << std::endl;
-    m_blockSize = 0;
-
-     envoiTexte("PERDU:3");
-}

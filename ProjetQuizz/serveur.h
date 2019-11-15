@@ -1,6 +1,6 @@
 #ifndef SERVEUR_H
 #define SERVEUR_H
-
+#include <QTcpSocket>
 #include <QObject>
 class FenetrePrincipale;
 
@@ -10,14 +10,13 @@ class QNetworkSession;
 class Serveur : public QObject{
     Q_OBJECT
 
-public:
-    Serveur(FenetrePrincipale * f);
+
 
 private slots:
     void sessionOuverte();
     void connexionClient();
-    void lireTexte();
-    void lireTexte2();
+    void EnvoieTexte();
+    void EnvoieTexte2();
 
     private:
     void tester_validite(const std::string & s);
@@ -29,7 +28,6 @@ private:
     QNetworkSession *m_network_session; // La session de connexion
     quint16 m_blockSize;
 
-    FenetrePrincipale * m_fenetre;
 };
 
 #endif // SERVEUR_H

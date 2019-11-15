@@ -1,7 +1,8 @@
 #ifndef BDDINTERFACE_H
 #define BDDINTERFACE_H
 
-
+#include <stdio.h>
+#include <iostream>
 #include <QSqlDatabase>
 #include <set>
 
