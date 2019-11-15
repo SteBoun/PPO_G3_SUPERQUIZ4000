@@ -10,3 +10,4 @@ Message serveur fais
 15/11/2019 : Verification du materiel
 Correction de bug dans ma fonction d'envoie de message
 Ajout d'une classe Client
+Modification des images
