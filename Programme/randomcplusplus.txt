@@ -4,26 +4,30 @@
 #include <stdio.h>
 #include <vector>
 
-std::vector<int> Tab_nbAleatoire;
+std::vector<int> Tab_nbAleatoire;//Enregistrement des nombre aleatoire déja sorti
 
-int aleatoire(int min,int max,std::vector<int> &Tableau)
+int aleatoire_sans_doublon(int min,int max,std::vector<int> &Tableau)
 {
     int i = 0;
-    std::random_device RAND_E;
-    std::mt19937 random_engine(RAND_E());
+    std::random_device RAND_E;//Déclare le generateur de nombre aleatoire
+    std::mt19937 random_engine(RAND_E());//declare la methode de géneration
     std::uniform_int_distribution<int> distrib{min,max};//prépare la zone de generation
-    int nbAleatoire = distrib(RAND_E);
-    while(i < Tableau.size())
+    int nbAleatoire = distrib(RAND_E);//recuperation de la valeur aleatoire
+    while(i < Tableau.size())//verification valeur deja existante
     {
-        
+        if(Tableau[i] == nbAleatoire)
+        {
+            std::cout << "Debug_Aleatoire = -1 \n";
+            return -1 ;
+        }
+        i++;
     }
-    std::cout << "Debug_Aleatoire = " << nbAleatoire << std::endl;//affiche un nombre aleatoire
+    //std::cout << "Debug_Aleatoire = " << nbAleatoire << std::endl;//affiche le nombre aleatoire (debug)
     Tableau.push_back(nbAleatoire);
     return nbAleatoire;
 }
 
 int main()
 {
-    aleatoire(1,15,Tab_nbAleatoire);
-    std::cout << Tab_nbAleatoire[0] << "\n" ;
+    do {} while(aleatoire_sans_doublon(1,5,Tab_nbAleatoire) == -1);//Appel de la fonction
 }
