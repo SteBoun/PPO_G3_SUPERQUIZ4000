@@ -12,11 +12,25 @@ class question : public QMainWindow
     Q_OBJECT
 
 public:
+
+
     explicit question(QWidget *parent = 0);
     ~question();
 
+
+    int aleatoire_sans_doublon(int min,int max,std::vector<int> &Tableau);
+    char get_proposistions();
+   char* get_path(int);
+    int get_random();
+    void set_random(int);
+
+
 private:
+
+    std::vector<int> Tab_nbAleatoire;//Enregistrement des nombre aleatoire déja sorti
+
     Ui::question *ui;
+    int random;
 };
 
 #endif // QUESTION_H
