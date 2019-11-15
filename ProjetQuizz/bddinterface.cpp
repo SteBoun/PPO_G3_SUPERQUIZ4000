@@ -1,4 +1,11 @@
 #include "bddinterface.h"
+#include "define.h"
+#include <iostream>
+
+#include <QtSql>
+
+// Initialisation de la variable membre statique
+bddinterface* bddinterface::m_instance = NULL;
 
 /** --------------------------------------------------------------------------------------
  * \brief Constructeur de la classe BddInterface.
