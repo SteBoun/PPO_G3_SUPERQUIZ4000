@@ -55,7 +55,7 @@ bool bddinterface::connexionEtablie() const
 }
 void bddinterface::connexion_bdd()
 {
-    m_db = QSqlDatabase::addDatabase("QMYSQL");
+    m_db = QSqlDatabase::addDatabase("QSQLITE");
 
     m_db.setHostName("10.16.38.200");
     m_db.setUserName("admin");
@@ -65,5 +65,5 @@ void bddinterface::connexion_bdd()
     if( m_db.open() )
         std::cout << "Vous êtes maintenant connecté à " << q2c(m_db.hostName()) << std::endl;
     else
-        std::cout << "La connexion a échouée, désolé" << std::endl;
+        std::cout << "La connexion a echouee, desole" << std::endl;
 }
