@@ -57,7 +57,7 @@ void bddinterface::connexion_bdd()
 {
     m_db = QSqlDatabase::addDatabase("QMYSQL");
 
-    m_db.setHostName("localhost");
+    m_db.setHostName("10.16.38.200");
     m_db.setUserName("admin");
     m_db.setPassword("Nantes44");
     m_db.setDatabaseName("superquiz4000");

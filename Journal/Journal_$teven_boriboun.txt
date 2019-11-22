@@ -11,3 +11,8 @@ Message serveur fais
 Correction de bug dans ma fonction d'envoie de message
 Ajout d'une classe Client
 Modification des images
+
+22/11/2019 : Objectif du jour : Préparer le raspberry, trouver une solution pour exécuter un programme .exe sous linux et transférer toute la bdd dans la raspberry puis donner l'acces a la bdd a tout le monde.
+IP de la raspberry: 10.16.38.200 Masque :255.255.0.0
+identifiant: pi
+Mot de passe : password
