@@ -13,3 +13,7 @@ réinstallation gitkraken
 Recherche+creation fonction aleatoire
 modification image debut
 -------------------------------------------------------
+
+22/11/2019-----------------------------------------------------------------------------
+Adaptation de la fonction qui permet de prendre plusieur nombre aléatoires sans doublon 
+---------------------------------------------------------------------------------------
