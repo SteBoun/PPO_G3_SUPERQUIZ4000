@@ -16,3 +16,6 @@ Modification des images
 IP de la raspberry: 10.16.38.200 Masque :255.255.0.0
 identifiant: pi
 Mot de passe : password
+http://10.16.38.200/phpmyadmin
+id bdd:admin
+mdp:Nantes44
