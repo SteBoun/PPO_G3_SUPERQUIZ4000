@@ -1,6 +1,6 @@
 #ifndef QUESTION_H
 #define QUESTION_H
-
+#include <bddinterface.h>
 #include <QMainWindow>
 
 namespace Ui {
@@ -23,7 +23,7 @@ public:
    char* get_path(int);
     int get_random();
     void set_random(int);
-
+    void demarrer_jeu(int);
 
 private:
 
@@ -31,6 +31,7 @@ private:
 
     Ui::question *ui;
     int random;
+    bddinterface * m_bdd;
 };
 
 #endif // QUESTION_H
