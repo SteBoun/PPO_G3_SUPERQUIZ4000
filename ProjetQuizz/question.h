@@ -23,7 +23,8 @@ public:
    char* get_path(int);
     int get_random();
     void set_random(int);
-    void demarrer_jeu(int);
+    void demarrer_jeu();
+    void afficher();
 
 private:
 

@@ -18,8 +18,8 @@ public:
 
 public:
     static bddinterface* instance();
-
     bool connexionEtablie() const;
+    void afficher_sql();
 
 
 private:

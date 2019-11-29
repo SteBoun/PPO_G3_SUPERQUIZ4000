@@ -25,21 +25,21 @@ question::question(QWidget *parent) :
     //la base de données
 
     m_bdd = bddinterface::instance();
-    int a = get_random();
-    demarrer_jeu(a);
-
+    demarrer_jeu();
+    m_bdd->afficher_sql();
 }
 
-void question::demarrer_jeu(int a)
+void question::demarrer_jeu()
 {
+
     /* const char* m_path_imgProp1 = get_path(2);
     const char* m_path_imgProp2 = get_path(get_random());
     const char* m_path_imgProp3 = get_path(get_random());
 */
-         const char* m_path_imgPix = "C:/Users/florian.enet/Pictures/cap.png";
-        const char* m_path_imgProp1 = get_path(a);
-        const char* m_path_imgProp2 = get_path(a);
-        const char* m_path_imgProp3 = get_path(a);
+        const char* m_path_imgPix = "C:/Users/florian.enet/Pictures/cap.png";
+        const char* m_path_imgProp1 = get_path(get_random());
+        const char* m_path_imgProp2 = get_path(get_random());
+        const char* m_path_imgProp3 = get_path(get_random());
 
 
     ui->setupUi(this);
@@ -70,6 +70,8 @@ void question::demarrer_jeu(int a)
 
 }
 
+
+
 question::~question()
 {
     delete ui;
@@ -78,7 +80,7 @@ question::~question()
 
 int question::get_random(){
 
-do {} while(aleatoire_sans_doublon(1,10,Tab_nbAleatoire) == -1);
+do {} while(aleatoire_sans_doublon(1,4,Tab_nbAleatoire) == -1);
     return random;
 }
 
@@ -115,6 +117,7 @@ int question::aleatoire_sans_doublon(int min,int max,std::vector<int> &Tableau)
     }
     std::cout << "Debug_Aleatoire = " << nbAleatoire << std::endl;//affiche le nombre aleatoire (debug)
     Tableau.push_back(nbAleatoire);
+    set_random(nbAleatoire);
     return nbAleatoire;
 }
 
