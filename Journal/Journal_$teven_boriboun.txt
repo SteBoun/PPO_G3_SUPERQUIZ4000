@@ -19,3 +19,9 @@ Mot de passe : password
 http://10.16.38.200/phpmyadmin
 id bdd:admin
 mdp:Nantes44
+
+29/11/2019 : Objectif du jour : trouver une solution pour exécuter un programme .exe sous linux NON, Installer la solution NON, tranferer de toutes les images dans la raspberry OK,
+http://tvaira.free.fr/projets/activites/activite-qt5-rpi.html // tuto qt pour rapsberry.
+http://raspiomix.org/doc-plus.html // raspiomix doc
+on va directement prendre qt sur raspberry pour le compiler 
+  
