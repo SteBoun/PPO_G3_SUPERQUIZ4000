@@ -12,7 +12,7 @@ bddinterface* bddinterface::m_instance = NULL;
  */
 bddinterface::bddinterface()
 {
-        connexion_bdd();
+    connexion_bdd();
 }
 /** --------------------------------------------------------------------------------------
  * \brief Destructeur de la classe BddInterface.
@@ -55,7 +55,7 @@ bool bddinterface::connexionEtablie() const
 }
 void bddinterface::connexion_bdd()
 {
-    m_db = QSqlDatabase::addDatabase("QSQLITE");
+    m_db = QSqlDatabase::addDatabase("QMYSQL");
 
     m_db.setHostName("10.16.38.200");
     m_db.setUserName("admin");
@@ -66,4 +66,28 @@ void bddinterface::connexion_bdd()
         std::cout << "Vous êtes maintenant connecté à " << q2c(m_db.hostName()) << std::endl;
     else
         std::cout << "La connexion a echouee, desole" << std::endl;
+}
+void bddinterface::afficher_sql(){
+    if(connexionEtablie()){
+        QSqlQuery query;
+
+        std::cout << "ConnexionEtablie"<<std::endl;
+    if(query.exec("SELECT MAX(id) FROM equipe"))
+       {
+        //std::cout << q2c(query.value(0).toString());
+
+        std::cout << query.exec("SELECT MAX(id) FROM equipe") <<std::endl;
+
+        while(query.next())
+        {
+            std::cout << "    Nouvelle entrée" << std::endl;
+            for(int x=0; x < query.record().count(); ++x)
+            {
+                std::cout << "        " << q2c(query.record().value(x).toString()) << " = " << q2c(query.value(x).toString()) << std::endl;
+            }
+
+        }
+}
+
+    }
 }

@@ -24,3 +24,12 @@ Acceder a une bdd en c++ :http://www.electro-info.ovh/Qt-acceder-a-une-base-de-d
 Connexion à la bdd possible, affichage "connexion réussi"
 requete impossible
 le get_random() fait crashé l'application graphique
+
+29/11/19
+Objectifs : 
+	Exécuter une requête sql permettant de récupéré le path d'une image
+	Avoir une fonction pour récupérer des image flouté et une non
+	Avoir une image flouté qui correspond à l'image non flouté
+
+Copy libmysql.dll to C:\Qt\Qt5.8.0\5.8\mingw53_32\bin pour regler le probleme de driver not loaded 
+Reglé le problème du crash de la fonction

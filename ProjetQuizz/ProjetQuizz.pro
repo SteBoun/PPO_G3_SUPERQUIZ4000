@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,13 +27,11 @@ SOURCES += \
         main.cpp \
         question.cpp \
     stats.cpp \
-    image.cpp \
     bddinterface.cpp
 
 HEADERS += \
         question.h \
     stats.h \
-    image.h \
     bddinterface.h \
     define.h
 
@@ -49,3 +47,4 @@ DISTFILES += \
 QT       += core gui sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = sqlTest
+
