@@ -12,5 +12,15 @@ Modifications taille images
 Création fonction set_random(), set_random(), get_path(int a)
 à faire, faire en sorte que 2 m_path_imgProp soit des images différentes et une m_path_imgProp soit l'image pixelisé
 
+22/11/19
+Objectifs : 
+	réussir à se connecter à la bdd dans le programme. Afficher "connexion réussie"
+	réaliser une requète pour récupérer un information suivant un ID
+	l'exécuter puis afficher le résultat
+	afficher l'image correspondant au résultat recu
 
+Acceder a une bdd en c++ :http://www.electro-info.ovh/Qt-acceder-a-une-base-de-donnees-MySQL
 
+Connexion à la bdd possible, affichage "connexion réussi"
+requete impossible
+le get_random() fait crashé l'application graphique

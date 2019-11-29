@@ -27,12 +27,15 @@ SOURCES += \
         main.cpp \
         question.cpp \
     stats.cpp \
-    image.cpp
+    image.cpp \
+    bddinterface.cpp
 
 HEADERS += \
         question.h \
     stats.h \
-    image.h
+    image.h \
+    bddinterface.h \
+    define.h
 
 FORMS += \
         question.ui
@@ -42,3 +45,7 @@ RESOURCES += \
 
 DISTFILES += \
     ../../../Pictures/cap.PNG
+
+QT       += core gui sql
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+TARGET = sqlTest
