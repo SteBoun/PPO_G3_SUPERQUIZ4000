@@ -25,4 +25,5 @@ test raspbery d'un code permettant d'allumer une led
 
 06/12/2019--------------------------------------------------------------------------------
 faire fonctioner une led et un bouton sur la raspberry avec wiring pi
+ok bouton remplacer par potentiomètre coulisant
 ------------------------------------------------------------------------------------------
