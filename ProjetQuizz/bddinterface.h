@@ -20,10 +20,11 @@ public:
     static bddinterface* instance();
     bool connexionEtablie() const;
     void afficher_sql();
-
+    char* get_path_image(int);
 
 private:
     void connexion_bdd();
+
 
 private:
     /** \brief Pointeur sur l'instance singleton BddInterface. */

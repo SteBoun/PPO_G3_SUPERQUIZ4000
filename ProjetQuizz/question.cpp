@@ -1,5 +1,7 @@
 #include "question.h"
 #include "ui_question.h"
+
+
 #include <QPixmap>
 
 #include <iostream>
@@ -26,7 +28,8 @@ question::question(QWidget *parent) :
 
     m_bdd = bddinterface::instance();
     demarrer_jeu();
-    m_bdd->afficher_sql();
+    m_bdd->get_path_image(1);
+    //m_bdd->afficher_sql();
 }
 
 void question::demarrer_jeu()
@@ -89,7 +92,7 @@ void question::set_random(int a){
 }
 
 char* question::get_path(int a){
-    char* tableau[40];
+ /*   char* tableau[40];
 
     tableau[1] = "C:/Users/florian.enet/Documents/Projet_PO/PPO_G3_SUPERQUIZ4000/Image/original/avion.jpg";
     tableau[2] = "C:/Users/florian.enet/Documents/Projet_PO/PPO_G3_SUPERQUIZ4000/Image/original/batterie-voiture.jpg";
@@ -97,6 +100,18 @@ char* question::get_path(int a){
     tableau[4] = "C:/Users/florian.enet/Pictures/cap.png";
 
     return tableau[a];
+*/
+    char* path;
+
+if(m_bdd->connexionEtablie()){
+     std::cout << "GET_PATH";
+
+   path = m_bdd->get_path_image(a);
+   std::cout << path<< std::endl;
+}
+
+return path;
+
 }
 
 int question::aleatoire_sans_doublon(int min,int max,std::vector<int> &Tableau)
