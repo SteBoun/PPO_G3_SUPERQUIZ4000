@@ -39,11 +39,12 @@ void question::demarrer_jeu()
     const char* m_path_imgProp2 = get_path(get_random());
     const char* m_path_imgProp3 = get_path(get_random());
 */
-        const char* m_path_imgPix = "C:/Users/florian.enet/Pictures/cap.png";
         const char* m_path_imgProp1 = get_path(get_random());
         const char* m_path_imgProp2 = get_path(get_random());
         const char* m_path_imgProp3 = get_path(get_random());
+        const char* m_path_imgPix = get_path(solution);
 
+        const char* m_path_logo_st_fe = "";
 
     ui->setupUi(this);
 //Image pixelisé
@@ -60,6 +61,7 @@ void question::demarrer_jeu()
 //prop 3
     QPixmap imgProp3(m_path_imgProp3);
 
+    QPixmap imgStFe(m_path_logo_st_fe);
 
 
     ui->pic_1->setPixmap(imgPix.scaled(450,450, Qt::KeepAspectRatio));
@@ -70,7 +72,7 @@ void question::demarrer_jeu()
 
     ui->prop_3->setPixmap(imgProp3.scaled(200,200, Qt::KeepAspectRatio));
 
-
+    ui->label_2->setPixmap(imgStFe.scaled(200,200, Qt::KeepAspectRatio));
 }
 
 
@@ -80,7 +82,9 @@ question::~question()
     delete ui;
     delete m_bdd;
 }
-
+void question::set_solution(int a){
+    solution = a;
+}
 int question::get_random(){
 
 do {} while(aleatoire_sans_doublon(1,4,Tab_nbAleatoire) == -1);
@@ -127,6 +131,7 @@ int question::aleatoire_sans_doublon(int min,int max,std::vector<int> &Tableau)
         {
             std::cout << "Debug_Aleatoire = -1 \n";
             return -1 ;
+            set_solution(nbAleatoire);
         }
         i++;
     }

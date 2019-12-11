@@ -17,7 +17,7 @@ public:
     explicit question(QWidget *parent = 0);
     ~question();
 
-
+    void set_aleatoire(int);
     int aleatoire_sans_doublon(int min,int max,std::vector<int> &Tableau);
     char get_proposistions();
    char* get_path(int);

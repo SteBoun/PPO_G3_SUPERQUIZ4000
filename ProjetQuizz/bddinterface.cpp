@@ -96,17 +96,18 @@ char* bddinterface::get_path_image(int a ){
     {
         if ( query.next() )
         {
-            std::cout << "value 0 = " << query.value(0).toString().toStdString() << std::endl;
-            std::cout << "value 1 = " << query.value(1).toString().toStdString() << std::endl;
-         filename =    query.value(0).toString().toStdString();
-         extension = query.value(1).toString().toStdString();
+            filename =    query.value(0).toString().toStdString();
+            extension = query.value(1).toString().toStdString();
+            std::cout << "value 0 = " << filename << std::endl;
+            std::cout << "value 1 = " << extension << std::endl;
+            path = filename + extension;
 
         }
     }
     else
         std::cout << "ELSE" << std::endl;
 
-   // path  = filename.
+
     return path;
 }
 
