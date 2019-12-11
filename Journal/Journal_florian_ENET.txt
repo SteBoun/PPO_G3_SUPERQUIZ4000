@@ -33,3 +33,10 @@ Objectifs :
 
 Copy libmysql.dll to C:\Qt\Qt5.8.0\5.8\mingw53_32\bin pour regler le probleme de driver not loaded 
 Reglé le problème du crash de la fonction
+06/12/19
+Objectifs :
+	Réussir à se connecter sur la BDD 
+	Faire des requete mysql pour avoir le nom et l'extension d'une image flouté et une image non flouté
+
+Modification de l'utilisateur en tout client pour se connecter
+Modification de l'envoie de requete avec un Qstring au lieu d'un int
