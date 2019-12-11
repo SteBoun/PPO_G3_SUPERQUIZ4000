@@ -27,3 +27,9 @@ test raspbery d'un code permettant d'allumer une led
 faire fonctioner une led et un bouton sur la raspberry avec wiring pi
 ok bouton remplacer par potentiomètre coulisant
 ------------------------------------------------------------------------------------------
+
+11/12/2019--------------------------------------------------------------------------------
+Ecriture d'une fonction permetant la lecture du potentiomètre linéaire
+ecriture d'une fonction permetant de selectioner une réponse
+ecriture d'une fonction pour remètre a 0 les potentiomètre
+------------------------------------------------------------------------------------------
